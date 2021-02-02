@@ -33,7 +33,7 @@ var list = [
   new Product("Pepperoni Pizza", null, "images/pizza_pepperoni.png", "50$"),
 ];
 
-
+// first structure
 function firstStructure() {
   var counter = 0;
   var animate;
@@ -90,7 +90,7 @@ function firstStructure() {
 }
 
 
-
+// second structure
 function secondStructure() {
   if (document.body.contains(document.querySelector(".wrapper"))) {
     document.querySelector(".wrapper").remove();
@@ -188,3 +188,83 @@ function secondStructure() {
 
   document.querySelector(".wrapper").appendChild(horizontal);
 }
+// third structure
+function thirdStructure() {
+  if (document.body.contains(document.querySelector(".wrapper"))) {
+    document.querySelector(".wrapper").remove();
+  }
+  var wrapper = document.createElement("div");
+  wrapper.className = "wrapper";
+  wrapper.style.backgroundImage = "url('/images/bg3.jpg')";
+  //first pizza
+  var firstPizza = document.createElement("div");
+  firstPizza.className = "first-pizza";
+  wrapper.appendChild(firstPizza);
+  //firstpizza header
+  var FirstPizzaHeader = document.createElement("div");
+  FirstPizzaHeader.className = "first-pizza-header";
+  var FirstPizzaHeaderText = document.createElement("h1");
+  FirstPizzaHeader.appendChild(FirstPizzaHeaderText);
+  firstPizza.appendChild(FirstPizzaHeader);
+  //first pizza price
+  var FirstPizzaPrice = document.createElement("div");
+  FirstPizzaPrice.className = "first-pizza-price";
+  var FirstPizzaPriceText = document.createElement("h1");
+  FirstPizzaPrice.appendChild(FirstPizzaPriceText);
+  firstPizza.appendChild(FirstPizzaPrice);
+
+  //first pizza image
+
+  var FirstPizzaImage = document.createElement("div");
+  FirstPizzaImage.className = "first-pizza-image";
+  var FirstPizzaImageimg = document.createElement("img");
+  FirstPizzaImage.appendChild(FirstPizzaImageimg);
+  firstPizza.appendChild(FirstPizzaImage);
+
+  //second pizza
+
+  var secondPizza = document.createElement("div");
+  secondPizza.className = "second-pizza";
+  wrapper.appendChild(secondPizza);
+  //second pizza header
+  var SecondPizzaHeader = document.createElement("div");
+  SecondPizzaHeader.className = "second-pizza-header";
+  var SecondPizzaHeaderText = document.createElement("h1");
+  SecondPizzaHeader.appendChild(SecondPizzaHeaderText);
+  secondPizza.appendChild(SecondPizzaHeader);
+  //second pizza price
+  var SecondPizzaPrice = document.createElement("div");
+  SecondPizzaPrice.className = "second-pizza-price";
+  var SecondPizzaPriceText = document.createElement("h1");
+  SecondPizzaPrice.appendChild(SecondPizzaPriceText);
+  secondPizza.appendChild(SecondPizzaPrice);
+
+  //second pizza image
+
+  var SecondPizzaImage = document.createElement("div");
+  SecondPizzaImage.className = "second-pizza-image";
+  var SecondPizzaImageimg = document.createElement("img");
+  SecondPizzaImage.appendChild(SecondPizzaImageimg);
+  secondPizza.appendChild(SecondPizzaImage);
+
+  //first pizza initial assignemnt
+  FirstPizzaHeaderText.innerHTML = list[6].productName;
+  FirstPizzaPriceText.innerHTML = list[6].productPrice;
+  FirstPizzaImageimg.src = list[6].productImage;
+  //first pizza initial assignemnt
+
+  SecondPizzaHeaderText.innerHTML = list[7].productName;
+  SecondPizzaPriceText.innerHTML = list[7].productPrice;
+  SecondPizzaImageimg.src = list[7].productImage;
+  document.body.appendChild(wrapper);
+}
+
+let functions = [firstStructure, secondStructure, thirdStructure];
+
+//Structure Loop
+let i = 0;
+var play = setInterval(() => {
+  functions[i]();
+  i++;
+  if (i > functions.length - 1) i = 0;
+}, 12000);
