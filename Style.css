@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  word-break: break-all;
+}
+.starting-screen {
+  font-size: 110px;
+  width: 1920px;
+  height: 1080px;
+  background: #e55d87; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5fc3e4,
+    #e55d87
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5fc3e4,
+    #e55d87
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  font-family: "Indie Flower", cursive;
+}
+.food-image {
+  width: 450px;
+}
+.food-content {
+  transform: rotate(-30deg);
+  position: absolute;
+  top: 120px;
+  left: 1070px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  animation: spin 4s infinite ease-out, moveLeftToRight 4s infinite ease-out;
+}
+.food-header {
+  font-size: 80px;
+  color: #ddd;
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 3px;
+}
+.food-price {
+  position: absolute;
+  font-size: 96px;
+  top: 700px;
+  left: 200px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 3px;
+  animation: food_price 4s infinite ease-out;
+}
+.price {
+  margin-right: 20px;
+}
+.food-description {
+  position: absolute;
+  font-family: "Indie Flower", cursive;
+  font-weight: bold;
+  font-size: 50px;
+  top: 150px;
+  left: 200px;
+  width: 400px;
+  height: 400px;
+  word-break: break-all;
+  animation: food_description 4s infinite ease-out;
+}
+.horizontal {
+  color: purple;
+  display: flex;
+  flex-direction: row;
+}
+.first-dessert {
+  position: relative;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 700px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.second-dessert {
+  position: relative;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 700px;
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+}
+.third-dessert {
+  position: relative;
+  margin-top: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+  height: 700px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.dessert-image img {
+  position: absolute;
+  height: 700px;
+  width: 600px;
+  top: 300px;
+  animation: moveBottomToTop 20s infinite;
+}
+.dessert-header {
+  display: flex;
+  font-size: 80px;
+  align-items: center;
+  justify-content: center;
+  animation: opacity_header 20s infinite;
+}
+.third-dessert .dessert-header {
+  animation: opacity_header_third 20s infinite;
+}
+.second-dessert .dessert-header {
+  animation: opacity_header_second 20s infinite;
+}
+.first-dessert .dessert-header {
+  animation: opacity_header_first 20s infinite;
+}
+.dessert-price {
+  margin: 30px;
+  display: flex;
+  font-size: 70px;
+  align-items: center;
+  justify-content: center;
+
+  animation: opacity_price 20s;
+}
+.first-pizza {
+  position: absolute;
+  animation: moveRightToLeftFirstPizza 20s infinite;
+  top: 10px;
+  left: 1300px;
+}
+.second-pizza {
+  animation: moveRightToLeftSecondPizza 20s infinite;
+  margin-top: 20px;
+  position: absolute;
+  top: 500px;
+  left: 1300px;
+}
+img {
+  width: 600px;
+}
+
+.first-pizza-header {
+  animation: opacity_pizza 20s;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second-pizza-header {
+  animation: opacity_pizza 20s;
+
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-pizza-price {
+  animation: opacity_pizza 20s;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second-pizza-price {
+  animation: opacity_pizza 20s;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes food_price {
+  0% {
+    left: -1000px;
+    top: -500px;
+  }
+  30% {
+    left: 200px;
+    top: 700px;
+  }
+  80% {
+    left: 200px;
+    top: 700px;
+  }
+  100% {
+    left: -1000px;
+    top: -500px;
+  }
+}
+@keyframes food_description {
+  0% {
+    left: 1920px;
+    top: -100px;
+  }
+  30% {
+    top: 150px;
+    left: 200px;
+  }
+  80% {
+    top: 150px;
+    left: 200px;
+  }
+  100% {
+    left: 2200px;
+    top: -500px;
+  }
+}
+@keyframes food_header {
+  0% {
+    left: 1920px;
+    top: -100px;
+  }
+  30% {
+    top: 120px;
+    left: 1070px;
+  }
+  80% {
+    top: 120px;
+    left: 1070px;
+  }
+  100% {
+    left: 220px;
+    top: -500px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(330deg);
+  }
+  80% {
+    transform: rotate(330deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes moveLeftToRight {
+  0% {
+    left: -100px;
+  }
+  30% {
+    top: 120px;
+    left: 1070px;
+  }
+  80% {
+    top: 120px;
+    left: 1070px;
+  }
+  100% {
+    left: -500px;
+    top: 0px;
+  }
+}
+@keyframes moveBottomToTop {
+  0% {
+    top: 600px;
+  }
+  25% {
+    top: 300px;
+  }
+  100% {
+    top: 300px;
+  }
+}
+@keyframes moveBottomToTop {
+  0% {
+    top: 600px;
+  }
+  25% {
+    top: 300px;
+  }
+  100% {
+    top: 300px;
+  }
+}
+@keyframes opacity_price {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity_header_first {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity_header_second {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity_header_third {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity_pizza {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveRightToLeftFirstPizza {
+  0% {
+    left: 2200px;
+  }
+  25% {
+    top: 10px;
+    left: 1300px;
+  }
+  100% {
+    top: 10px;
+    left: 1300px;
+  }
+}
+@keyframes moveRightToLeftSecondPizza {
+  0% {
+    left: 2200px;
+  }
+  25% {
+    top: 500px;
+    left: 1300px;
+  }
+  100% {
+    top: 500px;
+    left: 1300px;
+  }
+}
+@keyframes wrapper {
+  0% {
+    top: 0px;
+    left: 960px;
+  }
+  100% {
+    top: 540px;
+  }
+}
