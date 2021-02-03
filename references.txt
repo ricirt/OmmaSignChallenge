@@ -1,0 +1,8 @@
+ 		References
++https://css-tricks.com/snippets/css/keyframe-animation-syntax/
+
++https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+
++https://stackoverflow.com/questions/6685396/execute-the-setinterval-function-without-delay-the-first-time
+
+++https://www.pexels.com/photo/close-up-of-wooden-plank-326311/
